@@ -4,194 +4,1358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shakil Hossen - Laravel Developer & API Specialist">
-    <title>Md Shakil Hossen | Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/forms"></script>
+    <title>MD Shakil Hossen | PHP/Laravel Developer</title>
+    <meta name="description"
+        content="Experienced Software Engineer with 5+ years of expertise in building scalable web applications and software solutions. Proficient in Laravel, Codeigniter, PHP, JavaScript, MySQL, and APIs.">
+    <meta name="keywords"
+        content="Laravel Developer, PHP Developer, Software Engineer, Web Developer, Bangladesh, SSL Wireless">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="MD Shakil Hossen | Laravel Developer">
+    <meta property="og:description"
+        content="Experienced Software Engineer with 5+ years of expertise in building scalable web applications and software solutions.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="MD Shakil Hossen | PHP/Laravel Developer">
+    <meta name="twitter:description"
+        content="Experienced Software Engineer with 5+ years of expertise in building scalable web applications and software solutions.">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💼</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #64748b;
+            --light-color: #f8fafc;
+            --dark-color: #1e293b;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+            color: white;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark-color);
+            margin: 5px;
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: var(--secondary-color);
+        }
+
+        /* Improved hero title/role styling */
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.05;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-title .name-last {
+            color: var(--primary-color);
+            display: inline-block;
+        }
+
+        .designation {
+            font-size: 1.125rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-top: 0.25rem;
+            letter-spacing: 0.6px;
+        }
+
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.75rem;
+            }
+
+            .designation {
+                font-size: 1rem;
+            }
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-img {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-text h3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .detail-item h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .detail-item p {
+            margin-bottom: 0;
+        }
+
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--border-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .company {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .duration {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content ul {
+            margin-left: 1rem;
+        }
+
+        .timeline-content li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .timeline-content li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card .duration {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-tag {
+            background-color: #e0f2fe;
+            color: var(--primary-dark);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-card ul {
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-card li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .project-card li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background-color: var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 4px;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 21px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 70%;
+                height: calc(100vh - 70px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 2rem;
+                transition: var(--transition);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.active div:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .hamburger.active div:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active div:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-details {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .hero {
+                padding: 140px 0 80px;
+            }
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md p-4 fixed w-full z-10 top-0">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold">Md Shakil Hossen</h1>
-            <ul class="flex space-x-6">
-                <li><a href="#about" class="hover:text-blue-500">About</a></li>
-                <li><a href="#experience" class="hover:text-blue-500">Experience</a></li>
-                <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
-                <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
-                <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-            </ul>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">MD <span>Shakil Hossen</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="relative w-full h-96 bg-cover bg-center" style="background-image: url('hero-image.jpg');">
-        <div
-            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center p-6">
-            <h1 class="text-4xl font-bold">Md Shakil Hossen</h1>
-            <p class="text-lg">Laravel Developer | Building Scalable Web Applications | API Development</p>
-            <a href="#contact"
-                class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition">Hire Me</a>
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title">MD <span class="name-last">Shakil Hossen</span></h1>
+            <div class="designation">PHP / Laravel Developer</div>
+            <p>Experienced Software Engineer with 6+ years of expertise in building scalable web applications and
+                software solutions. Proficient in Laravel, Codeigniter, PHP, JavaScript, MySQL, and APIs.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Get In Touch</a>
+                <a href="#" class="btn btn-outline" id="download-cv">Download CV</a>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="max-w-4xl mx-auto my-20 p-6 bg-white shadow-lg rounded-lg">
-        <h2 class="text-2xl font-bold">About Me</h2>
-        <p class="mt-3">I am a Laravel developer with 5+ years of experience in API development, database management,
-            and software optimization. Passionate about clean code, secure applications, and performance optimization.
-        </p>
-    </section>
-
-
-    <!-- Experience Section -->
-    <section id="experience" class="max-w-4xl mx-auto my-20 p-6 bg-white shadow-lg rounded-lg">
-        <h2 class="text-2xl font-bold">Experience</h2>
-        <div class="mt-3 space-y-6">
-            <div>
-                <h3 class="text-xl font-semibold">Software Specialist - SSL Wireless</h3>
-                <p><strong>Jul 2023 - Present</strong></p>
-                <ul class="list-disc pl-6 text-gray-700">
-                    <li>Software Development & Maintenance: Designed, developed, and
-                        maintained software solutions, including web applications, APIs, and
-                        backend services, using Laravel, JavaScript, MySQL, and other
-                        technologies to support the company's various business functions.
-                    </li>
-                    <li>API Integrations: Integrated multiple third-party APIs for payment
-                        systems, client interactions, and transaction management, streamlining
-                        operations and enhancing service offerings.</li>
-                    <li>Database Management: Managed and optimized databases to ensure
-                        efficient data storage, retrieval, and reporting. Utilized techniques such
-                        as database indexing, query optimization, and replication to meet
-                        business requirements.</li>
-                </ul>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <!-- Profile image -->
+                    <img src="assets/p_size_photo.png" alt="MD Shakil Hossen" loading="lazy"
+                        style="width:100%; height:auto; display:block; border-radius:8px;" />
+                </div>
+                <div class="about-text">
+                    <h3>Software Specialist with over 6 years of experience</h3>
+                    <p>I'm a passionate software engineer specializing in backend development with Laravel and PHP.
+                        Currently contributing to impactful projects at SSL Wireless Ltd, driving innovation and
+                        business success.</p>
+                    <p>I have a proven track record in developing systems for billing, customer relationship management,
+                        and hotel management. Skilled in designing modular architectures, optimizing database
+                        performance, and integrating third-party services.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <h4>Name:</h4>
+                            <p>MD Shakil Hossen</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Email:</h4>
+                            <p>shakilpp148@gmail.com</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Location:</h4>
+                            <p>Dhaka, Bangladesh</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Phone:</h4>
+                            <p>01840997216</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3 class="text-xl font-semibold">Php Developer - Bdtask Limited</h3>
-                <p><strong>Dec 2020 - Jun 2023</strong></p>
-                <ul class="list-disc pl-6 text-gray-700">
-                    <li>Developing projects using PHP frameworks such as CodeIgniter and
-                        Laravel..</li>
-                    <li>Utilizing technologies like JavaScript, jQuery, HTML, CSS, Bootstrap,
-                        and MySQL for building robust applications.</li>
-                    <li>Contributed to in-house and client products as both a core developer
-                        and a team member, ensuring high-quality deliverables.</li>
-                    <li>Experienced in developing systems for E-commerce, Hotel
-                        Management, ERP, Accounting, HRM, and other business solutions</li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="text-xl font-semibold">Software Engineer - Pine Solutions Limited</h3>
-                <p><strong>Nov 2019 - Oct 2020</strong></p>
-                <ul class="list-disc pl-6 text-gray-700">
-                    <li>Engineered SMS Mama, a custom solution for small vendor users,
-                        enabling easy communication and business management.</li>
-                    <li>Optimized customer account management (AM) and reporting
-                        systems, improving client insights and data-driven decision-making.</li>
-                    <li>Implemented balance calculation mechanisms and integrated
-                        merchant APIs, streamlining payment processing and financial
-                        operations</li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-xl font-semibold">Junior Programmer - Colour Consaltancy</h3>
-                <p><strong>Feb 2019 - Sep 2019</strong></p>
-                <ul class="list-disc pl-6 text-gray-700">
-                    <li>Developed and maintained applications using the Laravel framework.</li>
-                    <li>Specialized in Order and Due Management systems, ensuring accurate
-                        tracking and processing.</li>
-                </ul>
-            </div>
-
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="max-w-4xl mx-auto my-20 p-6 bg-white shadow-lg rounded-lg">
-        <h2 class="text-2xl font-bold">Skills</h2>
-        <div class="grid grid-cols-2 gap-4 mt-3">
-            <span class="bg-gray-200 px-4 py-2 rounded">PHP & Laravel</span>
-            <span class="bg-gray-200 px-4 py-2 rounded">API Development & Integration</span>
-            <span class="bg-gray-200 px-4 py-2 rounded">MySQL Database</span>
-            <span class="bg-gray-200 px-4 py-2 rounded">Docker</span>
-            <span class="bg-gray-200 px-4 py-2 rounded">Git & GitHub</span>
-            <span class="bg-gray-200 px-4 py-2 rounded">GitLab</span>
-            <span class="bg-gray-200 px-4 py-2 rounded">Jira</span>
-            <span class="bg-gray-200 px-4 py-2 rounded">Bootstrap</span>
-            <span class="bg-gray-200 px-4 py-2 rounded">JavaScript & jQuery</span>
-            <span class="bg-gray-200 px-4 py-2 rounded">Windows & Ubuntu</span>            
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content card">
+                        <h3>Software Specialist</h3>
+                        <p class="company">SSL Wireless</p>
+                        <p class="duration">07/2023 - Present | Eskaton, Dhaka</p>
+                        <ul>
+                            <li>Designed, developed, and maintained software solutions using Laravel, JavaScript, MySQL
+                            </li>
+                            <li>Integrated multiple third-party APIs for payment systems and transaction management</li>
+                            <li>Managed and optimized databases for efficient data storage and retrieval</li>
+                            <li>Worked with cross-functional teams to deliver robust, scalable solutions</li>
+                            <li>Developed automated workflows for data processing and reporting</li>
+                            <li>Utilized version control tools like Git for code management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content card">
+                        <h3>PHP Developer</h3>
+                        <p class="company">botask</p>
+                        <p class="duration">12/2020 - 07/2023 | Khilkhet, Dhaka</p>
+                        <ul>
+                            <li>Developed projects using PHP frameworks such as Codeigniter and Laravel</li>
+                            <li>Utilized technologies like JavaScript, jQuery, HTML, CSS, Bootstrap, and MySQL</li>
+                            <li>Contributed to in-house and client products as both a core developer and team member
+                            </li>
+                            <li>Experienced in developing systems for E-commerce, Hotel Management, ERP, Accounting, HRM
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content card">
+                        <h3>Software Engineer</h3>
+                        <p class="company">Pine Solutions Limited</p>
+                        <p class="duration">11/2019 - 09/2020 | Banani, Dhaka</p>
+                        <ul>
+                            <li>Integrated dynamic APIs and developed custom modules for ERP systems</li>
+                            <li>Engineered SMS Mama, a custom solution for small vendor users</li>
+                            <li>Optimized customer account management and reporting systems</li>
+                            <li>Implemented balance calculation mechanisms and integrated merchant APIs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content card">
+                        <h3>Junior Programmer</h3>
+                        <p class="company">Colour Consultancy</p>
+                        <p class="duration">02/2019 - 11/2019 | Uttara, Dhaka</p>
+                        <ul>
+                            <li>Developed and maintained applications using the Laravel framework</li>
+                            <li>Specialized in Order and Due Management systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="max-w-4xl mx-auto my-20 p-6 bg-white shadow-lg rounded-lg">
-        <h2 class="text-2xl font-bold">Projects</h2>
-        <div class="mt-3">
-            <h3 class="text-xl font-semibold">SSL Billing</h3>
-            <p><strong>Tech Stack:</strong> Laravel, Blade Template, JavaScript, jQuery, MySQL</p>
-            <p><strong>Description:</strong> A web-based system designed to automate billing operations with user and
-                admin panels for managing invoices, payments, client accounts, reporting, and more.</p>
-            <p><strong>Key Features:</strong></p>
-            <ul class="list-disc pl-6 text-gray-700">
-                <li>Designed and developed a scalable billing system to manage high transaction volumes efficiently.
-                </li>
-                <li>Implemented data reporting with advanced filtering using Laravel Ajax.</li>
-                <li>Optimized performance, achieving 30% faster data processing through query optimization and caching.
-                </li>
-                <li>Ensured real-time synchronization with third-party platforms using Firebase and cron jobs.</li>
-            </ul>
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card card">
+                    <h3>SSL Billing</h3>
+                    <p class="duration">07/2023 - Present</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">Blade Template</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">jQuery</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <p>A web-based system designed to automate billing operations with user and admin panels for
+                        managing invoices, payments, client accounts, reporting, and more.</p>
+                    <ul>
+                        <li>Designed and developed a scalable billing system to manage high transaction volumes
+                            efficiently</li>
+                        <li>Implemented data reporting with advanced filtering using Laravel Ajax</li>
+                        <li>Optimized performance, achieving 30% faster data processing through query optimization and
+                            caching</li>
+                        <li>Ensured real-time synchronization with third-party platforms using Firebase and cron jobs
+                        </li>
+                    </ul>
+                </div>
+                <div class="project-card card">
+                    <h3>Employee Buddy</h3>
+                    <p class="duration">08/2023 - Present</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">RESTful API</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">IMAP</span>
+                    </div>
+                    <p>An internal employee management and engagement platform for SSL Wireless, built to automate HR
+                        processes, enhance communication, and track employee activities.</p>
+                    <ul>
+                        <li>Integrated third-party APIs (IMAP) for automated email retrieval and storage</li>
+                        <li>Developed RESTful APIs to streamline data transfer and storage processes</li>
+                        <li>Enhanced database performance for large-scale email data using optimized queries and
+                            Eloquent ORM</li>
+                        <li>Integrated activity tracking and real-time notifications to improve employee engagement</li>
+                    </ul>
+                </div>
+                <div class="project-card card">
+                    <h3>Email Summarizer</h3>
+                    <p class="duration">08/2024 - 02/2025</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">RESTful API</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Composer</span>
+                        <span class="tech-tag">IMAP</span>
+                    </div>
+                    <p>A web-based email management system designed to automate email retrieval, storage, and processing
+                        using RESTful APIs and IMAP integration, ensuring efficient handling of large-scale email data.
+                    </p>
+                    <ul>
+                        <li>Integrated third-party APIs (IMAP) for automated email retrieval and storage.</li>
+                        <li>Developed RESTful APIs to streamline data transfer and storage processes.</li>
+                        <li>Enhanced database performance for large-scale email data using optimized queries and
+                            Eloquent ORM.</li>
+                    </ul>
+                </div>
+                <div class="project-card card">
+                    <h3>Xain Hotel Management</h3>
+                    <p class="duration">2021 - 06/2023</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">CodeIgniter</span>
+                        <span class="tech-tag">HMVC</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">jQuery</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <p>A web-based system to automate hotel operations with user and admin panels for managing
+                        reservations, customers, accounting, HR, and more.</p>
+                    <ul>
+                        <li>Designed and developed a comprehensive hotel management system with modular architecture
+                            (HMVC)</li>
+                        <li>Built core modules for reservations, accounting, HR, customer management, restaurant, and
+                            laundry services</li>
+                        <li>Integrated APIs for payment gateways and third-party notifications</li>
+                        <li>Optimized database performance, achieving faster data retrieval through indexing and query
+                            optimization</li>
+                        <li>Developed a responsive UI using Bootstrap 4, ensuring cross-device compatibility</li>
+                    </ul>
+                </div>
+                <div class="project-card card">
+                    <h3>CRM – Customer Relationship Management</h3>
+                    <p class="duration">01/2022 - 05/2022</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">jQuery</span>
+                        <span class="tech-tag">AJAX</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <p>A CRM system that streamlines customer interactions, manages data, tracks sales, and integrates
+                        with social media platforms like Facebook for data collection.</p>
+                    <ul>
+                        <li>Integrated social media data collection, allowing businesses to gather customer data
+                            directly from Facebook</li>
+                        <li>Lead and customer management, enabling seamless tracking of customer interactions and sales
+                            activities</li>
+                        <li>Developed a customizable dashboard to monitor and analyze key metrics in real time</li>
+                        <li>Automated workflows for improved efficiency in communication and follow-ups</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="mt-3">
-            <h3 class="text-xl font-semibold">Email Summarizer</h3>
-            <p><strong>Tech Stack:</strong> Laravel, RESTful API, MySQL, Composer, IMAP</p>
-            <p><strong>Description:</strong> A web-based email management system designed to automate email retrieval,
-                storage, and processing using RESTful APIs and IMAP integration, ensuring efficient handling of
-                large-scale email data.</p>
-            <p><strong>Key Features:</strong></p>
-            <ul class="list-disc pl-6 text-gray-700">
-                <li>Integrated third-party APIs (IMAP) for automated email retrieval and storage.</li>
-                <li>Developed RESTful APIs to streamline data transfer and storage processes.</li>
-                <li>Enhanced database performance for large-scale email data using optimized queries and Eloquent ORM.
-                </li>
-            </ul>
-        </div>
-
-        <div class="mt-3">
-            <h3 class="text-xl font-semibold">Xain Hotel Management</h3>
-            <p><strong>Tech Stack:</strong> PHP (CodeIgniter, HMVC), JavaScript, jQuery, MySQL, HTML, CSS, Bootstrap</p>
-            <p><strong>Description:</strong> A web-based system to automate hotel operations with user and admin panels
-                for managing reservations, customers, accounting, HR, and more.</p>
-            <p><strong>Key Features:</strong></p>
-            <ul class="list-disc pl-6 text-gray-700">
-                <li>Designed and developed a comprehensive hotel management system with modular architecture (HMVC) to
-                    streamline daily operations.</li>
-                <li>Built core modules for reservations, accounting, HR, customer management, restaurant, and laundry
-                    services.</li>
-                <li>Integrated APIs for payment gateways and third-party notifications.</li>
-                <li>Optimized database performance, achieving faster data retrieval through indexing and query
-                    optimization.</li>
-                <li>Developed a responsive UI using Bootstrap 4, ensuring cross-device compatibility.</li>
-            </ul>
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Backend Technologies</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>PHP</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Laravel</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>CodeIgniter</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>MySQL</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend Technologies</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>jQuery</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>HTML/CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Bootstrap</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Git/GitHub</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>API Development</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Docker</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Jira</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="max-w-4xl mx-auto my-20 p-6 bg-white shadow-lg rounded-lg text-center">
-        <h2 class="text-2xl font-bold">Contact Me</h2>
-        <p>Email: <a href="mailto:shakilpp148@gmail.com" class="text-blue-500">shakilpp148@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/shakil-hossen-453406178/" class="text-blue-500">Shakil
-                Hossen</a></p>
-        <a href="MdShakilHossenResume.pdf"
-            class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition">Download
-            Resume</a>
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always open to discussing new opportunities, creative ideas, or opportunities to be part of
+                        your vision.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i>📧</i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>shakilpp148@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i>📱</i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>01840997216</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i>📍</i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Dhaka, Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/shakil-hossen-453406178/" class="social-link"
+                            target="_blank">
+                            <span>in</span>
+                        </a>
+                        <a href="https://github.com/Shakil148" class="social-link">
+                            <span>gh</span>
+                        </a>
+                        <a href="mailto:shakilpp148@gmail.com" class="social-link">
+                            <span>@</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>MD Shakil Hossen</h3>
+                <p>Software Specialist & Laravel Developer</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p class="copyright">© 2023 MD Shakil Hossen. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script>
-        AOS.init();
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Animate skill bars when scrolled into view
+        const skillBars = document.querySelectorAll('.skill-progress');
+
+        const animateSkillBars = () => {
+            skillBars.forEach(bar => {
+                const barPosition = bar.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+
+                if (barPosition < screenPosition) {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = width + '%';
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateSkillBars);
+
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Using mailto to send the form data
+            const subject = `Portfolio Contact from ${name}`;
+            const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+
+            window.location.href = `mailto:shakilpp148@gmail.com?subject=${subject}&body=${body}`;
+
+            // Reset form
+            contactForm.reset();
+
+            // Show success message (you could implement a toast notification here)
+            alert('Thank you for your message! I will get back to you soon.');
+        });
+
+        // Download CV button
+        const downloadCvBtn = document.getElementById('download-cv');
+
+        downloadCvBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('./assets/MdShakilHossenResume.pdf', '_blank');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Set active navigation link based on scroll position
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 
